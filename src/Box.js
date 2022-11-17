@@ -17,17 +17,18 @@ import './Box.css';
  *  Boxlist -> Box
  */
 
-function Box({height, width, backgroundColor, deleteBox}) {
+function Box({height, width, backgroundColor, deleteCurrBox}) {
   const style = {
     height: `${height}px`,
     width: `${width}px`,
-    backgroundColor: `${backgroundColor}`,
+    backgroundColor: backgroundColor,
   }
 
+  //top level div className should be the component name
   return (
-    <div className='Box-container'>
-      <div className="Box" style={style}></div>
-      <button className="Box-button" onClick={deleteBox}>Delete</button>
+    <div className='Box'>
+      <div className="Box-container" style={style}></div>
+      <button className="Box-button" onClick={deleteCurrBox}>Delete</button>
     </div>
   );
 }

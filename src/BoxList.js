@@ -10,6 +10,14 @@ import { v4 as uuid } from 'uuid';
  *
  * State:
  *  boxes - array of box objects
+ *  individual box (object)
+  /*
+    {
+      id: uuid
+      height,
+      width,
+      backgroundColor,
+    }
  *
  * Render:
  *  App -> BoxList -> Box, NewBoxList
@@ -34,8 +42,8 @@ function BoxList() {
    *  - formData (object)
    */
 
-  function addBox(formData) {
-    const newBox = { ...formData, id: uuid() };
+  function addBox(boxData) {
+    const newBox = { ...boxData, id: uuid() };
     setBoxes(boxList => [...boxList, newBox]);
   }
 
@@ -61,7 +69,7 @@ function BoxList() {
             height={box.height}
             width={box.width}
             backgroundColor={box.backgroundColor}
-            deleteBox={() => deleteBox(idx)}
+            deleteCurrBox={() => deleteBox(idx)}
           />
         ))}
       </div>

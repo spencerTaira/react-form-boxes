@@ -41,9 +41,9 @@ function NewBoxForm({addBox}) {
   return (
     <form className="NewBoxForm" onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="height">Height:</label>
+        <label htmlFor="NewBoxForm-height">Height:</label>
         <input
-          id="height"
+          id="NewBoxForm-height"
           name="height"
           value={formData.height}
           onChange={handleChange}
@@ -51,10 +51,9 @@ function NewBoxForm({addBox}) {
       </div>
 
       <div>
-        <label htmlFor="width">Width:</label>
+        <label htmlFor="NewBoxForm-width">Width:</label>
         <input
-          type="width"
-          id="width"
+          id="NewBoxForm-width"
           name="width"
           value={formData.width}
           onChange={handleChange}
@@ -62,10 +61,9 @@ function NewBoxForm({addBox}) {
       </div>
 
       <div>
-        <label htmlFor="backgroundColor">Background Color:</label>
+        <label htmlFor="NewBoxForm-backgroundColor">Background Color:</label>
         <input
-          type="backgroundColor"
-          id="backgroundColor"
+          id="NewBoxForm-backgroundColor"
           name="backgroundColor"
           value={formData.backgroundColor}
           onChange={handleChange}
